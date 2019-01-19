@@ -9,6 +9,16 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/site.css">
+
+        <style>
+        body {
+            background-color: #FADBD8;
+	    }
+     
+
+                    
+        </style>
+
     </head>
     <body>
         <header>
