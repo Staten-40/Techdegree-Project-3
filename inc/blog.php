@@ -8,7 +8,7 @@ $db = new PDO("sqlite:".__DIR__."/database.db");
    exit;
 }
 
-$stmt = $dtbs->prepare("SELECT" * FROM entries WHERE title = ?, date= ?, time_spent = ?, learned = ? AND resources = ?";
-$stmt = bind_param("s", $_POST["title"], $_POST["date"], $_POST["time_spent"], $_POST["learned"], $_POST["resources"] );
-$stmt->execute
+$db->prepare("SELECT * FROM entries WHERE title = ?, date= ?, time_spent = ?, learned = ? AND resources = ?");
+$stmt = bindParam("s", $_POST["title"], $_POST["date"], $_POST["time_spent"], $_POST["learned"], $_POST["resources"] );
+$stmt->execute;
 $stmt->close();
