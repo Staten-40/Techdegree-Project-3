@@ -2,8 +2,13 @@
 
 try {
 $db = new PDO("sqlite:".__DIR__."/database.db");
-} catch(Exception $e) {
-   echo ($e getMessage);
+  $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch(Exception $e) preprare()
+   echo ($e->getMessage();
    exit;
 }
-   var_dump($db);
+
+$stmt = $dtbs->prepare("SELECT" * FROM entries WHERE add = ?, edit = ? AND delete = ?";
+$stmt = bind_parm("s", $_POST["add"], $_POST["edit"], $_POST["delete"] );
+$stmt->execute
+$stmt->close();
