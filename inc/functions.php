@@ -2,6 +2,8 @@
 
 $results = $db->query("SELECT * FROM entries ORDER BY 'date' DESC");
 
+
+//Prepare statement to add/edit view for the entry page
 function add_entry($title, $date, $time_spent, $learned, $resources) {
     include 'connection.php';
     
