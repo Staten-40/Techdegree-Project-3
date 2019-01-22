@@ -8,11 +8,11 @@ function add_entry($title, $date, $time_spent, $learned, $resources) {
     $sql = "INSERT INTO entries($title, $date, $time_spent, $learned, $resources)";
         try {
          $results =$db->prepare($sql);
-         $results->bindValue(1, $title, PDO::PARAM_STR);
-         $results->bindValue(2, $date, PDO::PARAM_STR);
-         $results->bindValue(3, $time_spent, PDO::PARAM_STR);
-         $results->bindValue(4, $learned, PDO::PARAM_STR);
-         $results->bindValue(5, $resources, PDO::PARAM_STR);
+         $results->bindValue($title[0], PDO::PARAM_STR);
+         $results->bindValue($date[1], PDO::PARAM_STR);
+         $results->bindValue($time_spen[2]t, PDO::PARAM_STR);
+         $results->bindValue($learned[3], PDO::PARAM_STR);
+         $results->bindValue($resources[4], PDO::PARAM_STR);
          $results->execute();
          } catch(Exception $e) {
             echo $results;             
