@@ -1,5 +1,5 @@
 <<?php
-include 'journal.db';
+include 'journal.db.sqbpro';
 
 ?>
 
