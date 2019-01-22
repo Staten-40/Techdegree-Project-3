@@ -1,3 +1,8 @@
+<<?php
+include 'journal.db';
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,9 +18,10 @@
         <style>
         body {
             background-color: #FADBD8;
-            font-family: "Comic Sans MS", cursive, sans-serif,
-            color: blue;            
-        }     
+            color: blue            
+        } 
+        
+        
                     
         </style>
 
