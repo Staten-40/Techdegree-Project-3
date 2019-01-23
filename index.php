@@ -26,7 +26,8 @@ include 'journal.db.sqbpro';
         </style>
 
     </head>
-    <body>
+
+        <body>    
       
         <section>
             <div class="container">
@@ -50,8 +51,10 @@ include 'journal.db.sqbpro';
                 </div>
             </div>
         </section>
-        <?php  
-        foreach(add_entry as $entry) {
+
+         <!--List of  journal entries displaying the time and date of entries
+         <?php  
+        foreach(get_add_entry as $entry) {
             echo "<li>" . $title['title'] . " " . $date['date'] . "</li>";
         }
         echo "</li>";
@@ -59,11 +62,7 @@ include 'journal.db.sqbpro';
         "<a href="detail.php">Click here for more info</a>";    
         
         ?>
+
+       
         
-        <footer>
-            <div>
-                &copy; MyJournal
-            </div>
-        </footer>
-    </body>
-</html>
+      

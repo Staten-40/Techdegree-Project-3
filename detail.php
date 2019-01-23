@@ -1,3 +1,22 @@
+<?php
+
+//Display of the journal entries for all fields
+ foreach (get_add_entry() as $item) {
+    $total += $item['entries'];
+    echo "<tr>\n";
+    echo "<td>". $item['title'] . "</td>\n";
+    echo "<td>". $item['date'] . "</td>\n";
+    echo "<td>". $item['time_spent'] . "</td>\n";
+    echo "<td>". $item['learned'] . "</td>\n";
+    echo "<td>". $item['resources'] . "</td>\n";
+    echo "</tr>\n";
+}
+//Include link to edit entry?
+
+
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
