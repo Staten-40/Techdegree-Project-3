@@ -17,9 +17,9 @@ $results->bindValue(3,['time_spent'],PDO::PARAM_INT);
 $results->bindValue(4,['learned'],PDO::PARAM_STR);
 $results->bindValue(5,['resources'],PDO::PARAM_STR);
 $results->execute();
-    } catch($sql) {
-$entry = $results->fetch();
-return $entries;
+         $entry = $results->fetch();
+         } catch(Exception $e) {
+            return $entry;   
 
     }
 

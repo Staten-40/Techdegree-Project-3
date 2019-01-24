@@ -9,7 +9,7 @@ function get_add_entry($title, $date, $time_spent, $learned, $resources) {
     include 'connection.php';
     include 'functions.php';
     
-    $sql = "INSERT INTO entries($title, $date, $time_spent, $learned, $resources)";
+   /* $sql = "INSERT INTO entries($title, $date, $time_spent, $learned, $resources)";
         try {
          $results =$db->prepare($sql);
          $results->bindValue($title[0], PDO::PARAM_STR);
@@ -25,5 +25,6 @@ function get_add_entry($title, $date, $time_spent, $learned, $resources) {
 }
 
         ?>
+        */
 
 
