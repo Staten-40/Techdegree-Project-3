@@ -34,7 +34,7 @@ include 'functions.php';
             <div class="container">
                 <div class="entry-list">
                     <article>
-                    <!--<h2><a href="detail.html"><?php echo $sql; ?></a></h2> -->
+                    <!--<h2><a href="detail.html"><?php echo $sql; ?>Click here for more!</a></h2> -->
 
                         <h2><a href="detail.html">The Best Day I’ve Ever Had</a></h2>
                         <time datetime="2016-01-31">January 31, 2016</time>
@@ -58,7 +58,7 @@ include 'functions.php';
          <!-- List of  journal entries displaying the time and date of entries -->
      
 
-<a href="<?php echo 'detail.php'; ?>">Click here for more info</a> 
+<!--<a href="<?php echo 'detail.php'; ?>">Click here for more info</a> -->
          
 
        
