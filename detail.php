@@ -1,21 +1,31 @@
 <?php
 include 'connections.php';
 
-//Display of the journal entries for all fields
+//Display journal entries for all fields, include link
 $results = $db->bindValue('SELECT * FROM entries WHERE id=?');
 
-$results->bindValue(['title'],PDO::PARAM_INT);
-$results->bindValue(['date'],PDO::PARAM_INT);
-$results->bindValue(['time_spent'],PDO::PARAM_INT);
-$results->bindValue(['learned'],PDO::PARAM_INT);
-$results->bindValue(['resources'],PDO::PARAM_INT);
+function add_entry($entries) {
+    include 'connection.php';
+
+    $sql = 'INSERT INTO entries(time, date, time_spent, learned, resources) VALUE(?.?)';
+
+    try {
+$results = $db->prepre($sql);
+$results->bindValue(1,['title'],PDO::PARAM_STR);
+$results->bindValue(2,['date'],PDO::PARAM_INT);
+$results->bindValue(3,['time_spent'],PDO::PARAM_INT);
+$results->bindValue(4,['learned'],PDO::PARAM_STR);
+$results->bindValue(5,['resources'],PDO::PARAM_STR);
 $results->execute();
+    } catch($sql) {
 $entry = $results->fetch();
-return $entry;
+return $entries;
+
+    }
 
 ?>
 
-<a href="<?php "echo edit.php" ?>"Edit Post</a>
+<a href="<?php "echo edit.php" ?>">Edit Post</a>
 
 
 //Display of the journal entries for all fields
@@ -30,7 +40,7 @@ return $entry;
     echo "<td>". $item['resources'] . "</td>\n";
     echo "</tr>\n";
 } */
-//Include link to edit entry?
+
 
 
 
