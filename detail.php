@@ -19,7 +19,7 @@ $results->bindValue(5,['resources'],PDO::PARAM_STR);
 $results->execute();
          $entry = $results->fetch();
          } catch(Exception $e) {
-            return $entry;   
+            return $results;   
 
     }
 
