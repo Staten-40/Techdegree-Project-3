@@ -34,6 +34,8 @@ include 'functions.php';
             <div class="container">
                 <div class="entry-list">
                     <article>
+                    <!--<h2><a href="detail.html"><?php echo $sql; ?></a></h2> -->
+
                         <h2><a href="detail.html">The Best Day I’ve Ever Had</a></h2>
                         <time datetime="2016-01-31">January 31, 2016</time>
                     </article>
