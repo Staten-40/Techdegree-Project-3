@@ -1,7 +1,26 @@
 <?php
+include 'connections.php';
 
 //Display of the journal entries for all fields
- foreach (get_add_entry() as $item) {
+$results = $db->bindValue('SELECT * FROM entries WHERE id=?');
+
+$results->bindValue(['title'],PDO::PARAM_INT);
+$results->bindValue(['date'],PDO::PARAM_INT);
+$results->bindValue(['time_spent'],PDO::PARAM_INT);
+$results->bindValue(['learned'],PDO::PARAM_INT);
+$results->bindValue(['resources'],PDO::PARAM_INT);
+$results->execute();
+$entry = $results->fetch();
+return $entry;
+
+?>
+
+<a href="<?php "echo edit.php" ?>"Edit Post</a>
+
+
+//Display of the journal entries for all fields
+
+/* foreach (get_add_entry() as $item) {
     $total += $item['entries'];
     echo "<tr>\n";
     echo "<td>". $item['title'] . "</td>\n";
@@ -10,11 +29,11 @@
     echo "<td>". $item['learned'] . "</td>\n";
     echo "<td>". $item['resources'] . "</td>\n";
     echo "</tr>\n";
-}
+} */
 //Include link to edit entry?
 
 
-?>
+
 
 
 <!DOCTYPE html>

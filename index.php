@@ -1,5 +1,6 @@
 <<?php
 include 'journal.db.sqbpro';
+include 'functions.php';
 
 ?>
 
@@ -52,16 +53,11 @@ include 'journal.db.sqbpro';
             </div>
         </section>
 
-         <!--List of  journal entries displaying the time and date of entries
-         <?php  
-        foreach(get_add_entry as $entry) {
-            echo "<li>" . $title['title'] . " " . $date['date'] . "</li>";
-        }
-        echo "</li>";
+         <!-- List of  journal entries displaying the time and date of entries -->
+     
 
-        "<a href="detail.php">Click here for more info</a>";    
-        
-        ?>
+<a href="<?php echo 'detail.php'; ?>">Click here for more info</a> 
+         
 
        
         

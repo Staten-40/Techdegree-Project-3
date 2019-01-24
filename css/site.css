@@ -230,7 +230,10 @@ input[type=submit] {
 	margin-right: 5px;
 }
 
-
+h2  {
+color: rgb(13, 13, 95);
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
 
 
 

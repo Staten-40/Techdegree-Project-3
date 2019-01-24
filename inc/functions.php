@@ -7,6 +7,7 @@ $results = $db->query("SELECT * FROM entries ORDER BY 'date' DESC");
 //Prepare statement to add/edit view for the entry page
 function get_add_entry($title, $date, $time_spent, $learned, $resources) {
     include 'connection.php';
+    include 'functions.php';
     
     $sql = "INSERT INTO entries($title, $date, $time_spent, $learned, $resources)";
         try {
@@ -17,8 +18,9 @@ function get_add_entry($title, $date, $time_spent, $learned, $resources) {
          $results->bindValue($learned[3], PDO::PARAM_STR);
          $results->bindValue($resources[4], PDO::PARAM_STR);
          $results->execute();
+         $entry = $results->fetch()
          } catch(Exception $e) {
-            echo $results;             
+            return $entry;             
         }
 }
 

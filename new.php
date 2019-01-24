@@ -1,5 +1,11 @@
+<?php
+if(isset($_GET['entry']) {
+    list($time, $date, $category)  = get_project(filter_input(INPUT_GET, 'id', FILTER_SANITIZE_INT));
 
-        ?>
+
+if(project_id) {
+    $sql = 'UPDATE projects FROM title = ? category = ? WHERE project_id = ? ';
+    ?>
 
 <!DOCTYPE html>
 <html>
