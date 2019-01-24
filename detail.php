@@ -7,7 +7,7 @@ $results = $db->bindValue('SELECT * FROM entries WHERE id=?');
 function add_entry($entries) {
     include 'connection.php';
 
-    $sql = 'INSERT INTO entries(time, date, time_spent, learned, resources) VALUE(?.?)';
+    $sql = 'INSERT INTO entries(time, date, time_spent, learned, resources) VALUES(?,?)';
 
     try {
 $results = $db->prepre($sql);

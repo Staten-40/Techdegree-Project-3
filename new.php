@@ -3,9 +3,31 @@ if(isset($_GET['entry']) {
     list($time, $date, $category)  = get_project(filter_input(INPUT_GET, 'id', FILTER_SANITIZE_INT));
 
 
-if(project_id) {
+if(entries) {
     $sql = 'UPDATE projects FROM title = ? category = ? WHERE project_id = ? ';
     ?>
+
+<?php
+    if($_SERVER[REQUEST_METHOD] == 'POST') {
+        $title = trim(filter_input(INPUT_POST, 'title', FILTER_SANITIZE_STRING));
+        $date = trim(filter_input(INPUT_POST, 'date', FILTER_SANITIZE_INT));
+
+        if(empty('title') || empty('date'));
+        $error_message = "Don't forget the title and date!";
+    } else {
+        if(add-entry($title, $date)) {
+            header: ('Location: details.php' );
+        } else {
+            $error_message = "Could not add entry.";
+        }
+
+    }
+
+}
+
+?>
+
+
 
 <!DOCTYPE html>
 <html>

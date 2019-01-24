@@ -18,7 +18,7 @@ function get_add_entry($title, $date, $time_spent, $learned, $resources) {
          $results->bindValue($learned[3], PDO::PARAM_STR);
          $results->bindValue($resources[4], PDO::PARAM_STR);
          $results->execute();
-         $entry = $results->fetch()
+         $entry = $results->fetch();
          } catch(Exception $e) {
             return $entry;             
         }
