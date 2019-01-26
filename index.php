@@ -33,8 +33,10 @@ include 'connections.php';
                     <article>   
                     
                         foreach($entries as $entry) {
-                         echo '<h2><a href="detail.php?id=' . $entry['id'] . '" > ' $entry['title'] ' $entry['time datetime='m/d/Y']>January 31, 2018</a></h2>
-                        <time datetime="m-d-Y"></time>';
+                            
+                         echo '<article><h2><a href="detail.php?id=' . $entry['id'] . '" > ' $entry['title']</a></h2>
+                         <time datetime = F d, Y'>January 31, 2018</time></article>
+                        
                     
                     
 
