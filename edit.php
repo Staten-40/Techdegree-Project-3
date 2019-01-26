@@ -1,6 +1,8 @@
 <?php
+include 'connectin.php'; 
+
     //Update and/or edit entries, giving all entries a unique key
-   if(empty($_GET['id'])) {
+   if(!empty($_GET['id'])) {
             $entry_id = $_GET['id'];
 
             try {
@@ -11,6 +13,7 @@
             }
 
             $entry = $results->fetch(PDO::FETCH_ASSOC);
+            return $entry;
 
         }
     ?>

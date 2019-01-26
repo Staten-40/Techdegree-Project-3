@@ -29,9 +29,16 @@ include 'connections.php';
         <section>
             <div class="container">
                 <div class="entry-list">
-                    <article>
 
-                     <h2><a href="detail.html">The best day I’ve ever had</a></h2>
+                    <article>   
+                    
+                        foreach($entries as $entry) {
+                         echo '<h2><a href="detail.php?id=' . $entry['id'] . '" > ' $entry['title'] ' $entry['time datetime='m/d/Y']>January 31, 2018</a></h2>
+                        <time datetime="m-d-Y"></time>';
+                    
+                    
+
+                   <!--  <h2><a href="detail.html">The best day I’ve ever had</a></h2>
                         <time datetime="2016-01-31">January 31, 2016</time>
                     </article>
                     <article>
@@ -45,7 +52,7 @@ include 'connections.php';
                     <article>
                         <h2><a href="detail_4.html">Dude, where’s my car?</a></h2>
                         <time datetime="2016-01-31">January 31, 2016</time>
-                    </article>
+                    </article> -->
                 </div>
             </div>
         </section>
