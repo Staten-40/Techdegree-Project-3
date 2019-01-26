@@ -9,6 +9,7 @@ function get_add_entry($title, $date, $time_spent, $learned, $resources) {
     include 'connection.php';
     include 'functions.php';
     
+       
     $sql = "INSERT INTO entries($title, $date, $time_spent, $learned, $resources)";
         try {
          $results =$db->prepare($sql);
@@ -22,10 +23,7 @@ function get_add_entry($title, $date, $time_spent, $learned, $resources) {
             return $entry;   
                      
         }
-
-     sql UPDATE
-     SQL delete
-        ?>
+ ?>
         
 
 

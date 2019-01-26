@@ -1,11 +1,19 @@
-
-   if(!empty[$_GET['id'])) {
+<?php
+    //Update and/or edit entries, giving all entries a unique key
+   if(empty($_GET['id'])) {
             $entry_id = $_GET['id'];
 
-            $results = 'UPDATE * SET time ?, date ?,'
+            try {
+            $results = 'UPDATE entries SET title=?, date =?, time_spent=?, learaned=?, resources=? WHERE id=?';
+            } catch(Exception $e) {
+                echo $e->getMessage();
+                die();
+            }
+
+            $entry = $results->fetch(PDO::FETCH_ASSOC);
 
         }
-
+    ?>
 
 
 <!DOCTYPE html>
