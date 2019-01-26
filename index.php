@@ -35,7 +35,7 @@ include 'connections.php';
                         foreach($entries as $entry) {
                             
                          echo '<article><h2><a href="detail.php?id=' . $entry['id'] . '" > ' $entry['title']</a></h2>
-                         <time datetime = F d, Y'>January 31, 2018</time></article>
+                         <time datetime = 'F d, Y'>January 31, 2018</time></article>
                         
                     
                     
