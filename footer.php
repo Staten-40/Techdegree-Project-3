@@ -1,10 +1,14 @@
 
-<footer>
-    <div>
-        &copy; MyJournal
-    </div>
-</footer>
-
+< </div>
+            </div>
+        </section>
+        <footer>
+            <div>
+                &copy; MyJournal
+            </div>
+        </footer>
+    </body>
+</html>
 
 
 

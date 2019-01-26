@@ -1,45 +1,7 @@
-<?php
-include 'connections.php';
-
-//Display journal entries for all fields, include link
-$results = $db->bindValue('SELECT * FROM entries WHERE id=?');
-
-function add_entry($entries) {
-    include 'connection.php';
-
-    $sql = 'SELECT * FROM entries WHERE id=?';
-
-    try {
-$results = $db->prepre($sql);
-$results->bindValue(1,['title'],PDO::PARAM_STR);
-$results->bindValue(2,['date'],PDO::PARAM_INT);
-$results->bindValue(3,['time_spent'],PDO::PARAM_INT);
-$results->bindValue(4,['learned'],PDO::PARAM_STR);
-$results->bindValue(5,['resources'],PDO::PARAM_STR);
-$results->execute();
-         $entry = $results->fetch();
-         } catch(Exception $e) {
-            return $results;   
-
-    }
-
-?>
-
-<a href="<?php "echo edit.php" ?>">Edit Post</a>
-
 
 //Display of the journal entries for all fields
 
-/* foreach (get_add_entry() as $item) {
-    $total += $item['entries'];
-    echo "<tr>\n";
-    echo "<td>". $item['title'] . "</td>\n";
-    echo "<td>". $item['date'] . "</td>\n";
-    echo "<td>". $item['time_spent'] . "</td>\n";
-    echo "<td>". $item['learned'] . "</td>\n";
-    echo "<td>". $item['resources'] . "</td>\n";
-    echo "</tr>\n";
-} */
+
 
 
 

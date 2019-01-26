@@ -1,3 +1,13 @@
+
+   if(!empty[$_GET['id'])) {
+            $entry_id = $_GET['id'];
+
+            $results = 'UPDATE * SET time ?, date ?,'
+
+        }
+
+
+
 <!DOCTYPE html>
 <html>
     <head>
