@@ -1,5 +1,5 @@
 <?php
-include 'connectin.php'; 
+include 'connection.php'; 
 
     //Update and/or edit entries, giving all entries a unique key
    if(!empty($_GET['id'])) {
@@ -19,7 +19,7 @@ include 'connectin.php';
                 echo $e-getMessag();
                 die();
 
-                $entries = $results->fetch(PDO::FETCH_ASSOC);
+                $entries = $results->fetch(PDO::FETCH_ASSOC); 
 
 
            // $entry = $results->fetch(PDO::FETCH_ASSOC);

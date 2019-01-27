@@ -1,7 +1,21 @@
 <?php
 
+function get_all_entries() {
+    include("connection.php");
+    try {
+      $sql = "SELECT * FROM entries ORDER BY date DESC";
+        $results = $db->prepare($sql);
+        $results->execute();
+    } catch(Exception $e) {
+      echo "Unable to retrieve journal entries<br />";
+      echo $e->getMessage();
+    }
+    $entries = $results->fetchAll();
+    return $entries;
+  }
+
 //Prepare statement to add/edit view for the entry page
-function get_add_entry($title, $date, $time_spent, $learned, $resources) {
+/*function get_add_entry($title, $date, $time_spent, $learned, $resources) {
     include 'connection.php';
     include 'functions.php';
 
@@ -9,7 +23,7 @@ function get_add_entry($title, $date, $time_spent, $learned, $resources) {
         echo $entries['title'];
     
        
-    /*$sql = "INSERT INTO entries($title, $date, $time_spent, $learned, $resources)";
+    $sql = "INSERT INTO entries($title, $date, $time_spent, $learned, $resources)";
         try {
          $results = $db->prepare($sql);
          $results->bindValue(1,$title, PDO::PARAM_STR);
