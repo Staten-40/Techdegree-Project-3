@@ -34,14 +34,17 @@ include 'inc/functions.php';
                         <?php
                         include 'header.php';
                         foreach(get_all_entries() as $entry) {
-                            $dynDate = $entry['date'];
+                           
                             $date2 = date('F d, Y', strtotime($dynDate));
 
-                            echo '<article><h2><a href="detail.php?id=' . $entry['id'] . '" > ' . $entry['title'] . "</a></h2>
-                            <time datetime = $dynDate '". $entry['date'] . "'>" . $entry['date'] . "</time></article>"; 
+                                echo '<article><h2><a href="detail.php?id=' . $entry['id'] . '" > ' . $entry['title'] . "</a></h2>
+                                <time datetime = "'. $entry['date'] . '">$date2</time></article>";  
+                            ?>
+                            
+                           <?php echo $date2 ?>; 
 
                                                        }      
-                              ?>
+                              
 
                        
                    <!--  <h2><a href="detail.html">The best day I’ve ever had</a></h2>
