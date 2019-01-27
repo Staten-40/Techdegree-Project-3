@@ -4,9 +4,12 @@
 function get_add_entry($title, $date, $time_spent, $learned, $resources) {
     include 'connection.php';
     include 'functions.php';
+
+    if (isset($film)) {
+        echo $film['title'];
     
        
-    $sql = "INSERT INTO entries($title, $date, $time_spent, $learned, $resources)";
+    /*$sql = "INSERT INTO entries($title, $date, $time_spent, $learned, $resources)";
         try {
          $results = $db->prepare($sql);
          $results->bindValue(1,$title, PDO::PARAM_STR);
@@ -18,7 +21,7 @@ function get_add_entry($title, $date, $time_spent, $learned, $resources) {
                 } catch(Exception $e) {
             return $entry;   
                      
-        }
+        }*/
 
 //Retrieve entries from the database in decending order: Most recent entries first
 $results = $db->query("SELECT * FROM entries ORDER BY 'date' DESC");

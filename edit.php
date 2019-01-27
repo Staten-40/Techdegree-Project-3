@@ -6,10 +6,20 @@ include 'connectin.php';
             $entry_id = $_GET['id'];
 
             try {
-            $results = $db->query ('SELECT * FROM entries WHERE id = ?');
+            $results = $db->prepare('SELECT * FROM entries WHERE id = ?');
+            try {
+                $results = $db->prepare($sql);
+                $results->bindValue(1,$title, PDO::PARAM_STR);
+                $results->bindValue(2,$date, PDO::PARAM_STR);
+                $results->bindValue(3,$time_spent, PDO::PARAM_STR);
+                $results->bindValue(4,$learned, PDO::PARAM_STR);
+                $results->bindValue(5,$resources, PDO::PARAM_STR);
+                $results->execute();
             } catch(Exception $e) {
-                echo $e-getMessag());
+                echo $e-getMessag();
                 die();
+
+                $entries = $results->fetch(PDO::FETCH_ASSOC);
 
 
            // $entry = $results->fetch(PDO::FETCH_ASSOC);
