@@ -5,8 +5,8 @@ function get_add_entry($title, $date, $time_spent, $learned, $resources) {
     include 'connection.php';
     include 'functions.php';
 
-    if (isset($film)) {
-        echo $film['title'];
+    if (isset($entries)) {
+        echo $entries['title'];
     
        
     /*$sql = "INSERT INTO entries($title, $date, $time_spent, $learned, $resources)";
