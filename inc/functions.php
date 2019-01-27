@@ -38,7 +38,7 @@ function get_all_entries() {
         }*/
 
 //Retrieve entries from the database in decending order: Most recent entries first
-$results = $db->query("SELECT * FROM entries ORDER BY 'date' DESC");
+//$results = $db->query("SELECT * FROM entries ORDER BY 'date' DESC");
 
 
  ?>
