@@ -6,21 +6,21 @@ include 'connectin.php';
             $entry_id = $_GET['id'];
 
             try {
-            $results = 'UPDATE entries SET title=?, date =?, time_spent=?, learaned=?, resources=? WHERE id=?';
+            $results = $db->query ('SELECT * FROM entries WHERE id = ?');
             } catch(Exception $e) {
-                echo $e->getMessage();
+                echo $e-getMessag());
                 die();
-            }
 
-            $entry = $results->fetch(PDO::FETCH_ASSOC);
-            return $entry;
+
+           // $entry = $results->fetch(PDO::FETCH_ASSOC);
+           // return $results;
 
         }
     ?>
 
 
 <!DOCTYPE html>
-<html>
+<!--<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -42,7 +42,7 @@ include 'connectin.php';
         </header>
         <section>
             <div class="container">
-                <div class="edit-entry">
+                <div class="edit-entry"> -->
                     <h2>Edit Entry</h2>
                     <form>
                         <label for="title"> Title</label>
@@ -61,10 +61,10 @@ include 'connectin.php';
                 </div>
             </div>
         </section>
-        <footer>
+        <!--<footer>
             <div>
                 &copy; MyJournal
             </div>
         </footer>
     </body>
-</html>
+</html> -->
