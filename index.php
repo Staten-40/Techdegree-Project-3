@@ -33,17 +33,16 @@ include 'inc/functions.php';
                     <article>   
                         <?php
                         include 'header.php';
-                        foreach(get_all_entries() as $entry) {
-                           
-                            $date2 = date('F d, Y', strtotime($dynDate));
+                        foreach(get_all_entries() as $entry) {                           
+                            $date2 = date('F d, Y', strtotime());
 
                                 echo '<article><h2><a href="detail.php?id=' . $entry['id'] . '" > ' . $entry['title'] . "</a></h2>
-                                <time datetime = "'. $entry['date'] . '">$date2</time></article>";  
+                                echo <time datetime = '. $entry['date'] . '>$date2</time></article>";  
+                        }
                             ?>
                             
-                           <?php echo $date2 ?>; 
-
-                                                       }      
+                     
+                                                       
                               
 
                        

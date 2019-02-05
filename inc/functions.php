@@ -1,7 +1,7 @@
 <?php
 
 function get_all_entries() {
-    include("connection.php");
+    include("inc/connection.php");
     try {
       $sql = "SELECT * FROM entries ORDER BY date DESC";
         $results = $db->prepare($sql);
